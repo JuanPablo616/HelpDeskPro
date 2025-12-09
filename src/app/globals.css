@@ -1,5 +1,86 @@
 @import "tailwindcss";
 
+/* 
+LOGIN / REGISTER
+ */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 20px;
+}
+
+.auth-box {
+  background: #0d0d0d;
+  border: 2px solid #1e90ff;
+  padding: 30px;
+  width: 350px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+}
+
+.auth-title {
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  color: #cccccc;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  background: black;
+  border: 1px solid #1e90ff;
+  color: white;
+}
+
+.auth-button {
+  background: #1e90ff;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.auth-button:hover {
+  background: #0a74d6;
+}
+
+.auth-link {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-link span {
+  color: #1e90ff;
+  font-weight: bold;
+}
+
+.auth-link:hover span {
+  text-decoration: underline;
+}
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +104,124 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* PANEL DE AGENTE */
+
+.agent-container {
+  padding: 40px;
+  color: white;
+}
+
+.panel-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.filters-section {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  max-width: 650px;
+  border: 1px solid #1e90ff;
+}
+
+.filters-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+select,
+input {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #1e90ff;
+  background: #0c0c0c;
+  color: white;
+}
+
+.button-primary {
+  background: #1e90ff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background: #0a74d6;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.ticket-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #1e90ff;
+  box-shadow: 0 0 10px rgba(30,144,255,0.2);
+}
+
+.ticket-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1e90ff;
+}
+
+.ticket-description {
+  color: #cfcfcf;
+  margin-bottom: 12px;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  background: #222;
+  color: white;
+  border: 1px solid #1e90ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e90ff;
+}
+
+.delete-btn {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.delete-btn:hover {
+  background: #8b0000;
+}
+
+.details-btn {
+  background: #1e90ff;
+  border-color: #1e90ff;
+}
+
+.details-btn:hover {
+  background: #0a74d6;
 }
