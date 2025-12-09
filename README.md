@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HelpDeskPro – Sistema de Tickets (Next.js + MongoDB)
 
-## Getting Started
+HelpDeskPro es una aplicación de gestión de tickets que permite a **clientes** crear solicitudes de soporte y a **agentes** administrarlas, actualizarlas y cerrarlas.  
+El proyecto fue desarrollado con **Next.js 14 (App Router)**, **MongoDB**, **Mongoose**, **TypeScript** y **TailwindCSS**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Características principales
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 👤 Autenticación
+- Login de usuarios (cliente y agente)
+- Registro de nuevos usuarios
+- Roles: **client** y **agent**
+- Autenticación basada en JWT
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🎫 Gestión de Tickets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Cliente:
+- Crear tickets
+- Ver solo sus propios tickets
+- Ver detalles del ticket
+- Agregar comentarios
 
-## Learn More
+#### Agente:
+- Ver todos los tickets
+- Filtrar por estado y prioridad
+- Editar ticket:
+  - Cambiar prioridad
+  - Cambiar estado (open, in-progress, closed)
+  - Asignarse el ticket
+- Eliminar tickets
+- Ver detalles y comentarios
 
-To learn more about Next.js, take a look at the following resources:
+### 📩 Notificaciones por Email
+- Email automático para el cliente cuando crea un ticket
+- Email automático a todos los agentes cuando se registra un nuevo ticket
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 💾 Base de Datos
+- MongoDB Atlas
+- Modelos: User, Ticket, Comment
+- Semillas (“seed”) para usuarios de prueba
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tecnologías usadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Tecnología | Uso |
+|-----------|-----|
+| **Next.js 14** | Frontend + API |
+| **React** | UI |
+| **MongoDB Atlas** | Base de datos |
+| **Mongoose** | Modelado de datos |
+| **JWT** | Autenticación |
+| **TailwindCSS** | Estilos |
+| **Nodemailer** | Envío de correos |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📦 Instalación
+
+### 1️⃣ Clona el repositorio
+```sh
+git clone https://github.com/JuanPablo616/HelpDeskPro
+cd helpdeskpro
+
+
+installacion de dependencias 
+
+npm install 
+
+
+MONGODB_URI="mongodb+srv://juanrojas0616:pablo0616@juanpablo-16.rmfh2fm.mongodb.net/helpdeskpro?retryWrites=true&w=majority"
+
+JWT_SECRET="clavepruebadesempeño"
+
+EMAIL_USER="juan.rojas0616@gmail.com"
+EMAIL_PASS="gkzv fpjr alwz rzwr"
+
+
+NEXTAUTH_SECRET="clavepruebadesempeño"
+
+TYPESCRIPT_IGNORE_DEPRECATIONS="true"
