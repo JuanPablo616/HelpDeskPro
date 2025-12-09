@@ -21,12 +21,13 @@ export default function SignUpPage() {
 
     const data = await res.json();
 
-    if (res.ok) {
-      alert("Registro exitoso");
-      router.push("/login");
-    } else {
-      alert(data.message || "Error al registrar");
+    if (!res.ok) {
+      alert(data.message || "Error inesperado");
+      return;
     }
+
+    alert("Registro exitoso");
+    router.push("/login");
   }
 
   return (
